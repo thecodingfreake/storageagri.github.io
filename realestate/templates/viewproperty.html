@@ -1,0 +1,117 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>View Property</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+   <ul>
+      <li><a class="active" href="http://127.0.0.1:8000">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/posts">Post</a></li>
+      <li><a href="/comment">Comment</a></li>
+      <li id="login"><a href="/login"> Login</a></li>
+      <li id="login2"><a href="/register">register</a></li>
+    </ul>
+</header>
+
+<!-- header section ends -->
+
+<!-- view property section starts  -->
+
+<section class="view-property">
+   <div class="details">
+      {% for op in option %}
+         <div class="thumb">
+         <div class="big-image">
+            <img src="https://drive.google.com/thumbnail?id={{op.image}}" alt="">
+         </div>
+      </div>
+      <h3 class="name">{{op.type}}</h3>
+      <p class="location">{{op.address}}<i class="fas fa-map-marker-alt"></i><span></span></p>
+      <div class="info">
+         <p><i class="fas fa-tag"></i><span>150000</span></p>
+         <p><i class="fas fa-user"></i><span>{{op.owner}}</span></p>
+         <p><i class="fas fa-phone"></i><a href="tel:1234567890">9551657687</a></p>
+         <p><i class="fas fa-building"></i><span>{{op.type}}</span></p>
+         <p><i class="fas fa-house"></i><span>rent</span></p>
+         <p><i class="fas fa-calendar"></i><span>{{op.date}}</span></p>
+      </div>
+      <h3 class="title">details</h3>
+      <div class="flex">
+         <div class="box">
+            <p><i>Area :</i><span>{{op.size}}</span></p>
+            <p><i>power supply:</i><span>24 hours</span></p>
+            <p><i>power backup:</i><span>available</span></p>
+         </div>
+      </div>
+      <h3 class="title">description</h3>
+      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cupiditate aliquid ipsum recusandae maxime nisi, velit eaque, libero, exercitationem culpa accusamus. Neque dolor quaerat modi saepe facere dignissimos temporibus molestias.</p>
+      <form action="" method="post">
+         <input type="submit" value="save property" name="save" class="inline-btn">
+      </form>
+      {% endfor %}
+   </div>
+
+</section>
+
+<!-- view property section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footer section starts  -->
+<footer class="footer">
+
+   <section class="flex">
+
+      <div class="box">
+         <a href="tel:1234567890"><i class="fas fa-phone"></i><span>9445316460</span></a>
+         <a href="mailto:shaikhanas@gmail.com"><i class="fas fa-envelope"></i><span>mdfawaz@gmail.com</span></a>
+         <a href="#"><i class="fas fa-map-marker-alt"></i><span>Chennai, india - 600053</span></a>
+      </div>
+
+      </div>
+
+      <div class="box">
+         <a href="#"><span>facebook</span><i class="fab fa-facebook-f"></i></a>
+         <a href="#"><span>twitter</span><i class="fab fa-twitter"></i></a>
+         <a href="#"><span>linkedin</span><i class="fab fa-linkedin"></i></a>
+         <a href="#"><span>instagram</span><i class="fab fa-instagram"></i></a>
+
+      </div>
+
+   </section>
+</footer>
+
+<!-- footer section ends -->
+
+<!-- custom js file link  -->
+<script src="script.js"></script>
+
+</body>
+</html>

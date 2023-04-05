@@ -1,0 +1,165 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+       <ul>
+        <li><a class="active" href="http://127.0.0.1:8000">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/posts">Post</a></li>
+        <li><a href="/comment">Comment</a></li>
+        <li id="login"><a href="/login"> Login</a></li>
+        <li id="login2"><a href="/register">register</a></li>
+      </ul>
+        </div>
+        <div class="container">  
+        <div class="intro">
+            <h2>Find Storage Unit That Suits You</h2>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat illo distinctio culpa voluptatibus deleniti nam voluptatem fuga dignissimos debitis provident!
+            <button class="buttons">Tour</button>
+            <div class="hint">
+                <div>
+                    <b> 1300+ </b>
+                    properties
+                </div>   
+                <div>
+                   <b> 4500+ </b><br>
+                    happy customers
+                </div> 
+                <div>
+                   <b> 343+ </b><br>
+                    trusted partners
+                </div>
+            </div>
+        </div>
+        <div class="image_box">
+            <img src="{%static 'open3.jpg' %}" alt="" class="imgs">
+
+        </div>
+        <div class="bar">
+            <b><p>Search for the storage your looking for</p></b>
+            <div class="selectors">
+                <a href="/openshed" style="text-decoration: none; color:white;"> <button> Open Sheds</button></a>
+                <a href="/closedshed" style="text-decoration: none; color:white;"><button>Closed Sheds</button></a>
+                <a href="/coldshed" style="text-decoration: none; color:white;"><button> Storage</button></a>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <section class="listings">
+           <div class="box-container" style="margin-top:80px ;">
+           <div class="box">
+              <div class="admin">
+                 <h3>j</h3>
+                 <div>
+                    <p>Abraham</p>
+                    <span>10-11-2022</span>
+                 </div>
+              </div>
+              <div class="thumb">
+                 <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
+                 <p class="type"><span>Open Shed</span></p>
+                 <form action="" method="post" class="save">
+                    <button type="submit" name="save" class="far fa-heart"></button>
+                 </form>
+                 <img src="{%static 'closed 7.jpeg' %}" alt="">
+              </div>
+              <h3 class="name" id="a1">Open Shed</h3>
+              <p class="location" ><i class="fas fa-map-marker-alt" ></i><span>Chennai</span></p>
+              <div class="flex">
+                 <p id="a12"><i class="fas fa-maximize"></i><span>henni-6000053</span></p>
+              </div>
+              <form action="viewproperty" method="post">
+              <button class="btn" name="property" value="{{op.id}},{{op.are}}">view property</button>
+           </form>
+           </div>
+        
+        <div class="box">
+               <div class="admin">
+                  <h3>j</h3>
+                  <div>
+                     <p>Abraham</p>
+                     <span>10-11-2022</span>
+                  </div>
+               </div>
+               <div class="thumb">
+                  <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
+                  <p class="type"><span>Open Shed</span></p>
+                  <form action="" method="post" class="save">
+                     <button type="submit" name="save" class="far fa-heart"></button>
+                  </form>
+                  <img src="{%static 'open3.jpg' %}" alt="">
+               </div>
+               <h3 class="name" id="a1">Open Shed</h3>
+               <p class="location" ><i class="fas fa-map-marker-alt" ></i><span>Chennai</span></p>
+               <div class="flex">
+                  <p id="a12"><i class="fas fa-maximize"></i><span>henni-6000053</span></p>
+               </div>
+               <form action="viewproperty" method="post">
+               <button class="btn" name="property" value="{{op.id}},{{op.are}}">view property</button>
+            </form>
+            </div>
+            <div class="box">
+               <div class="admin">
+                  <h3>j</h3>
+                  <div>
+                     <p>Abraham</p>
+                     <span>10-11-2022</span>
+                  </div>
+               </div>
+               <div class="thumb">
+                  <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
+                  <p class="type"><span>Open Shed</span></p>
+                  <form action="" method="post" class="save">
+                     <button type="submit" name="save" class="far fa-heart"></button>
+                  </form>
+                  <img src="{%static 'cold2.jpg' %}" alt="">
+               </div>
+               <h3 class="name" id="a1">Open Shed</h3>
+               <p class="location" ><i class="fas fa-map-marker-alt" ></i><span>Chennai</span></p>
+               <div class="flex">
+                  <p id="a12"><i class="fas fa-maximize"></i><span>henni-6000053</span></p>
+               </div>
+               <form action="viewproperty" method="post">
+               <button class="btn" name="property" value="{{op.id}},{{op.are}}">view property</button>
+            </form>
+            </div>
+         </div>
+
+       
+     </section>
+<footer class="footer">
+
+        <section class="flex">
+     
+           <div class="box" style="margin-left: 70px; margin-top:40px;">
+              <a href="tel:1234567890"><i class="fas fa-phone"></i><span>9445316460</span></a>
+              <a href="mailto:shaikhanas@gmail.com"><i class="fas fa-envelope"></i><span>mdfawaz@gmail.com</span></a>
+              <a href="#"><i class="fas fa-map-marker-alt"></i><span>Chennai, india - 600053</span></a>
+           </div>
+     
+           </div>
+     
+           <div class="box" style="margin-top: 40px;margin-bottom:40px;">
+              <a href="#"><span>facebook</span><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><span>twitter</span><i class="fab fa-twitter"></i></a>
+              <a href="#"><span>linkedin</span><i class="fab fa-linkedin"></i></a>
+              <a href="#"><span>instagram</span><i class="fab fa-instagram"></i></a>
+     
+           </div>
+     
+        </section>
+</footer>
+</body>
+</html>

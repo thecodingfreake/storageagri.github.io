@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact Us</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+   <ul>
+      <li><a class="active" href="http://127.0.0.1:8000">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/posts">Post</a></li>
+      <li><a href="/comment">Comment</a></li>
+      <li id="login"><a href="/login"> Login</a></li>
+      <li id="login2"><a href="/register">register</a></li>
+    </ul>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact">
+
+   <div class="row">
+      <div class="image">
+         <img src="images/contact-img.svg" alt="">
+      </div>
+      <form action="contact" method="post">
+         {% csrf_token %}
+         <h3>get in touch</h3>
+         <input type="text" name="name" required maxlength="50" placeholder="enter your name" class="box">
+         <input type="email" name="email" required maxlength="50" placeholder="enter your email" class="box">
+         <input type="number" name="number" required maxlength="10" max="9999999999" min="0" placeholder="enter your number" class="box">
+         <textarea name="message" placeholder="enter your message" required maxlength="1000" cols="30" rows="10" class="box"></textarea>
+         <input type="submit" value="send message" name="send" class="btn">
+      </form>
+   </div>
+
+</section>
+
+<!-- contact section ends -->
+
+
+
+
+
+
+
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section class="flex">
+
+      <div class="box">
+         <a href="tel:1234567890"><i class="fas fa-phone"></i><span>9445316460</span></a>
+         <a href="mailto:shaikhanas@gmail.com"><i class="fas fa-envelope"></i><span>mdfawaz@gmail.com</span></a>
+         <a href="#"><i class="fas fa-map-marker-alt"></i><span>Chennai, india - 600053</span></a>
+      </div>
+
+      </div>
+
+      <div class="box">
+         <a href="#"><span>facebook</span><i class="fab fa-facebook-f"></i></a>
+         <a href="#"><span>twitter</span><i class="fab fa-twitter"></i></a>
+         <a href="#"><span>linkedin</span><i class="fab fa-linkedin"></i></a>
+         <a href="#"><span>instagram</span><i class="fab fa-instagram"></i></a>
+
+      </div>
+
+   </section>
+</footer>
+<!-- footer section ends -->
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
